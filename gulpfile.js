@@ -67,8 +67,10 @@ function watch() {
     });
    }
 
-    gulp.watch('./src/**/*', gulp.parallel(styles, html));
+    gulp.watch('./src/css/**/*', styles);
+    gulp.watch('./src/**/*.html', html);
     gulp.watch('./smartgrid.js', grid);
+    gulp.watch('./src/img/**/*', img);
 }
 
 function grid(done){

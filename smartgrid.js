@@ -1,25 +1,25 @@
 module.exports = {
     outputStyle: 'less',
-    columns: 24,
-    offset : '10px',
+    columns: 12,
+    offset : '20px',
     mobileFirst: false,
     container: {
-        maxWidth: "950px",
-        fields: "30px",
+        maxWidth: "960px",
+        fields: "10px",
     },
     breakPoints: {
         md: {
             width: "920px",
-            fields: "15px"
+            fields: "10px"
         },
         sm: {
-            width: "720px"
+            width: "768px"
         },
         xs: {
             width: "576px"
         },
         xxs: {
-            width: "420px"
+            width: "320px"
         }
     }
 
