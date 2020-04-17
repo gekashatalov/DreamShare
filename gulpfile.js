@@ -61,9 +61,11 @@ function img (){
 function watch() {
    if(isSync){
     browserSync.init({
+        //tunnel: true,
         server: {
             baseDir: "./build/",
         }
+        
     });
    }
 
