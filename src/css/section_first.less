@@ -1,6 +1,8 @@
 
 .section__first{
-    background: url('../img/section1.png');
+    background: url('../img/section1.png') no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     min-height: 700px;
     height: auto;
     object-fit: contain;
@@ -106,6 +108,7 @@
     min-height: 40px;
     display: flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
     color: @color_white;
     border: none;
@@ -114,6 +117,9 @@
     font-family: Montserrat;
     font-size: 14px;
     font-weight: bold;
+    .xxs-block({
+        min-width: 0px;
+    })
 }
 
 .section_title{
