@@ -1,5 +1,12 @@
 <?php
 
+    $links = mysqli_connect('localhost', 'root', '', 'new_test');
+
+    if(mysqli_connect_errno()){
+        echo 'Ошибка подключения к базе данных('.mysqli_connect_errno(). ') : '.mysqli_connect_error();
+        exit();
+    }
+
     define('THEME_FOLDER', get_template_directory_uri());
     define('CSS_FOLDER', THEME_FOLDER . '/css');
     define('IMG_FOLDER', THEME_FOLDER . '/IMG');
