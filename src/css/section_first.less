@@ -1,0 +1,133 @@
+
+.section__first{
+    background: url('../img/section1.png') no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 700px;
+    height: auto;
+    object-fit: contain;
+    background-color: #2c2b2b;
+    background-position-x: center;
+}
+
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    .xxs-block({
+        justify-content: center;
+    })
+}
+
+.header__title{
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: bold;
+    color: @color_white;
+    padding: 46px 0;
+
+    .xxs-block({
+        order:1;
+        padding-top: 100px;
+    })
+
+}
+
+.header__button{
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    color: @color_white;
+    border: none;
+    background-color: rgba( 0, 0, 0, 0);
+
+    &_sign{
+        width: 90px;
+        height: 36px;
+        font-family: Montserrat;
+        font-weight: 400;
+        color: @color_white;
+        background-color: rgba( 0, 0, 0, 0);
+        border-radius: 40px;
+        border: solid 2px @color_white;
+
+        .xxs-block({
+            margin-top: 20px;
+        })
+    }
+}
+
+.section__first_content{
+    .row-flex();
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    .xxs-block({
+        margin-top: -50px;
+    })
+}
+
+.section__first_title{
+    .col();
+    .size(6);
+    .size-sm(10);
+    .size-xs(12);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 52px;
+    font-weight: bold;
+    color: @color_white;
+    .xs-block({
+        font-size: 30px;
+    })
+}
+
+.section__first_p{
+    .col();
+    .size(6);
+    .size-sm(10);
+    .size-xs(12);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: @color_white;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 300;
+    .xs-block({
+        font-size: 18px;
+    })
+}
+
+.button_red{
+    .col();
+    min-width: 225px;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: @color_white;
+    border: none;
+    border-radius: 40px;
+    background-color: #ff4e50;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: bold;
+    .xxs-block({
+        min-width: 0px;
+    })
+}
+
+.section_title{
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 22px;
+    font-weight: bold;
+    color: #444444;
+    margin-top: 95px;
+    margin-bottom: 35px;
+}

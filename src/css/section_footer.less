@@ -1,0 +1,93 @@
+.section_footer{
+    margin-top: 100px;
+    padding-top: 37px;
+    padding-bottom: 36px;
+    //min-height: 300px;
+    border-top: 2px solid #ff4e50;
+    .xs-block({
+        padding-top: 20px;
+        padding-bottom: 20px;
+    });
+
+    &_positions{
+        .col();
+        .size(3);
+        .size-xs(8);
+        .xs-block({
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        });
+        display: flex;
+        flex-direction: column;
+    }
+
+    &_dreamshare{
+        font-family: Montserrat;
+        font-size: 16px;
+        color: #ff4e50;
+        .xs-block({
+            margin-bottom: 12px;
+        });
+    }
+
+    &_company{
+        //align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: bold;
+        color: #444444;
+    }
+
+    &_partners{
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: bold;
+        color: #444444;
+        .xs-block({
+            margin-top: 5px;
+            margin-bottom: 20px;
+            
+        });
+    }
+
+    &_link{
+        margin-top: 11px;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 300;
+        color: #999999;
+        .xs-block({
+            margin: 5px;
+        });
+    }
+
+    &_logo{
+        align-items: flex-end;
+        font-family: Montserrat;
+        font-size: 10px;
+        font-weight: bold;
+        color: #cccccc;
+        .xs-block({
+            align-items: center;
+        });
+    }
+
+    &_design{
+        margin-bottom: 7px;
+    }
+
+    &_links{
+        display: flex;
+        flex-direction: column;
+        .xs-block({
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+        })
+    }
+}

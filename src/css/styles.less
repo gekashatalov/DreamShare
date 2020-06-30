@@ -1,0 +1,66 @@
+
+@import "normalize.less";
+@import "smart-grid.less";
+@import "variables.less";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import "section_first.less";
+@import "section_second.less";
+@import "section_third.less";
+@import "section_fourth.less";
+@import "section_fifth.less";
+@import "section_footer.less";
+
+button:hover {
+   color: #9050AA;
+   border-color: currentColor;
+   //background-color: white;
+}
+
+button:active{
+    transform: scale(1.01, 1.01);
+}
+
+button:focus {
+    outline: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+a:hover , a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.wrapper{
+    .wrapper();
+}
+/*
+.degubGrid{
+    .debug(rgba(0, 0, 0, 0.4), 1px solid #ff0);
+}
+*/
+.row{
+    .row-flex();
+}
+
+.row_center{
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    max-width: 100% !important;
+    height: auto;
+}
+
+
+
+
+.row_items{
+    .row-flex();
+    justify-content: space-around;
+}
+
