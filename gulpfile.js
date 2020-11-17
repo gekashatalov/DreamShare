@@ -22,52 +22,52 @@ const isSync = (process.argv.indexOf('--sync') !== -1);
 ];
 */
 
-function clear(){
+function clear() {
     return del('./build/*');
 }
 
-function styles(){
+function styles() {
     return gulp.src('./src/css/styles.less')
-                .pipe(sourcemaps.init())
-                //.pipe(concat('styles.css'))
-                .pipe(less())
-                .pipe(uncss({
-                    html: ['./src/index.html']
-                }))
-                .pipe(autoprefixer({
-                    overrideBrowserslist: ['> 0.1%'],
-                    cascade: true
-                }))
-                .pipe(gcmq())
-                .pipe(gulpif(isProd, cleanCSS({
-                    level: 2
-                })))
-                .pipe(gulpif(isDev, sourcemaps.write()))
-                .pipe(gulp.dest('./build/css'))
-                .pipe(gulpif(isSync, browserSync.stream()));
+        .pipe(sourcemaps.init())
+        //.pipe(concat('styles.css'))
+        .pipe(less())
+        .pipe(uncss({
+            html: ['./src/index.html']
+        }))
+        .pipe(autoprefixer({
+            overrideBrowserslist: ['> 0.1%'],
+            cascade: true
+        }))
+        .pipe(gcmq())
+        .pipe(gulpif(isProd, cleanCSS({
+            level: 2
+        })))
+        .pipe(gulpif(isDev, sourcemaps.write()))
+        .pipe(gulp.dest('./build/css'))
+        .pipe(gulpif(isSync, browserSync.stream()));
 }
 
-function html () {
+function html() {
     return gulp.src('./src/*.html')
-            .pipe(gulp.dest('./build'))
-            .pipe(gulpif(isSync, browserSync.stream()));
+        .pipe(gulp.dest('./build'))
+        .pipe(gulpif(isSync, browserSync.stream()));
 }
 
-function img (){
+function img() {
     return gulp.src('./src/img/**/*')
-            .pipe(gulp.dest('./build/img'));
+        .pipe(gulp.dest('./build/img'));
 }
 
 function watch() {
-   if(isSync){
-    browserSync.init({
-        //tunnel: true,
-        server: {
-            baseDir: "./build/",
-        }
-        
-    });
-   }
+    if (isSync) {
+        browserSync.init({
+            //tunnel: true,
+            server: {
+                baseDir: "./build/",
+            }
+
+        });
+    }
 
     gulp.watch('./src/css/**/*', styles);
     gulp.watch('./src/**/*.html', html);
@@ -75,19 +75,19 @@ function watch() {
     gulp.watch('./src/img/**/*', img);
 }
 
-function grid(done){
+function grid(done) {
     delete require.cache[require.resolve('./smartgrid')];
     let settings = require('./smartgrid.js');
-    smartgrid('./src/css', settings );
+    smartgrid('./src/css', settings);
     done();
 }
 
-let build = gulp.series(clear, 
+let build = gulp.series(clear,
     gulp.parallel(styles, html, img));
 
 gulp.task('build', build);
 gulp.task('grid', grid);
-gulp.task('watch', gulp.series(build , watch));
+gulp.task('watch', gulp.series(build, watch));
 
 
 
